@@ -17,7 +17,7 @@ const ValidateAccount = () => {
 		.then(res => {
 
           history.push('/loginCustomer');
-          toastr.info('Your Account Activated!')
+          toastr.success('Your Account Activated!')
 
         }).catch(function (err) {
           console.log(err);

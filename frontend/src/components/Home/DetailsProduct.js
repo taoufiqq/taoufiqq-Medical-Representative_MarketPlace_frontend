@@ -12,11 +12,12 @@ const DetailsProduct=()=> {
 
     const history = useHistory();
     const [product, setProduct] = useState("");
+    const [price, setPrice] = useState("");
     const idPdts=localStorage.getItem('idProduct');
 
 
   
-  // get all admin and show it in table
+  // get all product and show it in table
   
   useEffect(()=>{  
     axios.get(`https://marketplace-elhanchaoui-api.herokuapp.com/Seller/getProductById/${idPdts}`)
@@ -39,7 +40,7 @@ const DetailsProduct=()=> {
     const [exchangeRate, setExchangeRate] = useState();
 
     useEffect(async()=>{
-      fetch('http://data.fixer.io/api/latest?access_key=afe4bd8abcfd1a927150d247ad43ac84')
+      fetch('http://data.fixer.io/api/latest?access_key=876c5207aa9358c9da867544657ccacb')
       .then(currencyRes => currencyRes.json())
       .then(data => {   
         setExchangeRate(data.rates[currency]);        
