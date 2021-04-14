@@ -40,7 +40,9 @@ const DetailsProduct=()=> {
     const [exchangeRate, setExchangeRate] = useState();
 
     useEffect(async()=>{
-      fetch('http://data.fixer.io/api/latest?access_key=876c5207aa9358c9da867544657ccacb')
+     
+
+      fetch('http://data.fixer.io/api/latest?access_key=6be3bc06f5ee7b8f7f35cd842efe49b2')
       .then(currencyRes => currencyRes.json())
       .then(data => {   
         setExchangeRate(data.rates[currency]);        
