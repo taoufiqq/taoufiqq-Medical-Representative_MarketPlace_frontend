@@ -42,7 +42,7 @@ const DetailsProduct=()=> {
     useEffect(async()=>{
      
 
-      fetch('http://data.fixer.io/api/latest?access_key=6be3bc06f5ee7b8f7f35cd842efe49b2')
+      fetch('http://data.fixer.io/api/latest?access_key=7c40185690b75364e8456f8feadb2d29')
       .then(currencyRes => currencyRes.json())
       .then(data => {   
         setExchangeRate(data.rates[currency]);        
